@@ -1,0 +1,11 @@
+{{ Rubriken  }}
+
+{% if allCars %}
+    <ul>
+    {% for car in allCars %}
+        <li><a href="/sales/{{ car.id }}/">{{ car.regno }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No cars are available for sale.</p>
+{% endif %}
